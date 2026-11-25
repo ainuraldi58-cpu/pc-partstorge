@@ -1,0 +1,1455 @@
+/* =====================================================
+   PC STORE - CSS FINAL
+   Modern Professional Theme
+===================================================== */
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary: #06b6d4;
+    --secondary-dark: #0891b2;
+
+    --dark: #0f172a;
+    --dark-2: #1e293b;
+
+    --text: #0f172a;
+    --text-muted: #64748b;
+
+    --white: #ffffff;
+    --background: #f8fafc;
+    --card: #ffffff;
+
+    --border: #e2e8f0;
+
+    --success: #16a34a;
+    --success-dark: #15803d;
+
+    --danger: #dc2626;
+    --danger-dark: #b91c1c;
+
+    --radius: 10px;
+
+    --shadow:
+        0 8px 25px rgba(15, 23, 42, 0.08);
+
+    --shadow-hover:
+        0 15px 35px rgba(37, 99, 235, 0.16);
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 0%,
+            rgba(6, 182, 212, 0.07),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(37, 99, 235, 0.07),
+            transparent 30%
+        ),
+        var(--background);
+
+    color: var(--text);
+
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    width: 100%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #070d18,
+            #0f1b32,
+            #12365a
+        );
+
+    color: var(--white);
+
+    box-shadow:
+        0 8px 25px rgba(2, 6, 23, 0.18);
+
+    position: relative;
+    z-index: 100;
+}
+
+
+/* =====================================================
+   TOP NAVBAR
+===================================================== */
+
+.top-navbar {
+    width: 90%;
+    max-width: 1280px;
+
+    margin: auto;
+
+    padding: 18px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo h2 {
+    color: #ffffff;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+.logo span {
+    color: #67e8f9;
+}
+
+.logo small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.search-box {
+    width: 42%;
+    max-width: 520px;
+
+    display: flex;
+
+    box-shadow:
+        0 8px 25px rgba(2, 6, 23, 0.20);
+}
+
+.search-box input {
+    width: 100%;
+
+    padding: 13px 16px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 9px 0 0 9px;
+
+    background: #ffffff;
+
+    color: var(--text);
+
+    font-size: 14px;
+}
+
+.search-box input:focus {
+    box-shadow:
+        inset 0 0 0 2px rgba(37, 99, 235, 0.20);
+}
+
+.search-box button {
+    width: 55px;
+
+    border: none;
+
+    border-radius: 0 9px 9px 0;
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.search-box button:hover {
+    background: var(--primary-dark);
+}
+
+
+/* =====================================================
+   MENU KANAN
+===================================================== */
+
+.menu-kanan {
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+}
+
+.menu-kanan a {
+    color: #cbd5e1;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.25s;
+}
+
+.menu-kanan a:hover {
+    color: #67e8f9;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+nav {
+    background: rgba(5, 12, 25, 0.65);
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.07);
+}
+
+nav ul {
+    width: 90%;
+    max-width: 1280px;
+
+    margin: auto;
+
+    list-style: none;
+
+    display: flex;
+
+    gap: 30px;
+}
+
+nav a {
+    display: block;
+
+    padding: 14px 2px;
+
+    color: #cbd5e1;
+
+    font-weight: 600;
+
+    position: relative;
+
+    transition: 0.25s;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 6px;
+
+    height: 2px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--secondary),
+            var(--primary)
+        );
+
+    transform: scaleX(0);
+
+    transition: 0.25s;
+}
+
+nav a:hover,
+nav .active {
+    color: #ffffff;
+}
+
+nav a:hover::after,
+nav .active::after {
+    transform: scaleX(1);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    width: 90%;
+    max-width: 1280px;
+
+    min-height: 390px;
+
+    margin: 42px auto;
+
+    padding: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    color: #ffffff;
+
+    border-radius: 25px;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(6, 182, 212, 0.24),
+            transparent 30%
+        ),
+        linear-gradient(
+            120deg,
+            #0b1220,
+            #13254a 55%,
+            #145b82
+        );
+
+    box-shadow:
+        0 25px 55px rgba(15, 23, 42, 0.20);
+
+    overflow: hidden;
+}
+
+.hero-text {
+    width: 52%;
+
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: clamp(34px, 4vw, 52px);
+
+    line-height: 1.12;
+
+    letter-spacing: -1px;
+
+    color: #ffffff;
+}
+
+.hero-text span {
+    color: #67e8f9;
+}
+
+.hero-text p {
+    margin: 22px 0 28px;
+
+    max-width: 620px;
+
+    color: #cbd5e1;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+.hero-image {
+    width: 45%;
+
+    text-align: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image img {
+    width: 100%;
+
+    max-height: 300px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 20px 30px rgba(0, 0, 0, 0.30)
+        );
+
+    transition: 0.3s;
+}
+
+.hero-image img:hover {
+    transform: scale(1.04);
+}
+
+
+/* =====================================================
+   BUTTON SYSTEM
+===================================================== */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding: 0 26px;
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    border: 1px solid var(--primary);
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 12px rgba(37, 99, 235, 0.16);
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.btn:hover {
+    background: var(--primary-dark);
+
+    border-color: var(--primary-dark);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(37, 99, 235, 0.24);
+}
+
+
+/* =====================================================
+   PRODUCT BUTTON
+===================================================== */
+
+.btn-card {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    min-height: 42px;
+
+    padding: 0 18px;
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    border: 1px solid var(--primary);
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.btn-card:hover {
+    background: var(--primary-dark);
+
+    border-color: var(--primary-dark);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(37, 99, 235, 0.22);
+}
+
+
+/* =====================================================
+   CART BUTTON
+===================================================== */
+
+.btn-keranjang {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    min-height: 42px;
+
+    margin-top: 8px;
+
+    padding: 0 15px;
+
+    background: #ffffff;
+
+    color: #0f172a;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.btn-keranjang:hover {
+    background: #0f172a;
+
+    border-color: #0f172a;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(15, 23, 42, 0.18);
+}
+
+
+/* =====================================================
+   WHATSAPP / BUY BUTTON
+===================================================== */
+
+.btn-beli-wa {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    min-height: 42px;
+
+    margin-top: 8px;
+
+    padding: 0 15px;
+
+    background: var(--success);
+
+    color: #ffffff;
+
+    border: 1px solid var(--success);
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.btn-beli-wa:hover {
+    background: var(--success-dark);
+
+    border-color: var(--success-dark);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(22, 163, 74, 0.22);
+}
+
+
+/* =====================================================
+   DELETE BUTTON
+===================================================== */
+
+.hapus {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 38px;
+
+    padding: 0 16px;
+
+    background: #ffffff;
+
+    color: var(--danger);
+
+    border: 1px solid #fecaca;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.hapus:hover {
+    background: var(--danger);
+
+    border-color: var(--danger);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 14px rgba(220, 38, 38, 0.20);
+}
+
+
+/* =====================================================
+   CHECKOUT
+===================================================== */
+
+.checkout {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+
+    margin-top: 20px;
+
+    padding: 0 28px;
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    border: 1px solid var(--primary);
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.checkout:hover {
+    background: var(--primary-dark);
+
+    border-color: var(--primary-dark);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(37, 99, 235, 0.24);
+}
+
+
+/* =====================================================
+   FORM BUTTON
+===================================================== */
+
+form button,
+.login-box button {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    min-height: 44px;
+
+    padding: 0 20px;
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    border: 1px solid var(--primary);
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+form button:hover,
+.login-box button:hover {
+    background: var(--primary-dark);
+
+    border-color: var(--primary-dark);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(37, 99, 235, 0.24);
+}
+
+
+/* =====================================================
+   PRODUCT SECTION
+===================================================== */
+
+.produk {
+    width: 90%;
+    max-width: 1280px;
+
+    margin: auto;
+
+    padding-bottom: 60px;
+}
+
+.judul {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.judul h2,
+.produk > h2 {
+    color: var(--text);
+}
+
+.judul a {
+    color: var(--primary);
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.judul a:hover {
+    color: var(--secondary-dark);
+}
+
+
+/* =====================================================
+   PRODUCT GRID
+===================================================== */
+
+.card-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =====================================================
+   PRODUCT CARD
+===================================================== */
+
+.card {
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    padding: 22px;
+
+    text-align: center;
+
+    box-shadow: var(--shadow);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+
+    border-color: #bfdbfe;
+
+    box-shadow: var(--shadow-hover);
+}
+
+.card img {
+    width: 100%;
+
+    height: 190px;
+
+    object-fit: contain;
+
+    margin-bottom: 8px;
+
+    transition: 0.3s;
+}
+
+.card:hover img {
+    transform: scale(1.04);
+}
+
+.card h3 {
+    margin-top: 10px;
+
+    color: var(--text);
+
+    font-size: 18px;
+}
+
+.card h4 {
+    margin: 10px 0;
+
+    color: var(--primary);
+
+    font-size: 18px;
+}
+
+.card p {
+    margin-top: 12px;
+
+    color: var(--success);
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about,
+.kontak,
+.cart {
+    width: 90%;
+    max-width: 1280px;
+
+    margin: 50px auto;
+}
+
+.about-box,
+.kontak-kiri,
+.kontak-kanan,
+.login-box,
+.cart-box {
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    box-shadow: var(--shadow);
+}
+
+.about-box {
+    padding: 42px;
+}
+
+.about-box h1,
+.kontak-kiri h1,
+.cart h1 {
+    margin-bottom: 20px;
+
+    color: var(--primary);
+}
+
+.about-box p {
+    color: #475569;
+
+    line-height: 1.9;
+
+    text-align: justify;
+}
+
+
+/* =====================================================
+   VISI MISI
+===================================================== */
+
+.visi-misi {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 35px;
+}
+
+.box {
+    padding: 30px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f1f7ff
+        );
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.box i {
+    margin-bottom: 18px;
+
+    font-size: 42px;
+
+    color: var(--primary);
+}
+
+.box h3 {
+    margin-bottom: 12px;
+}
+
+.box p {
+    text-align: center;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.kontak {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 35px;
+}
+
+.kontak-kiri,
+.kontak-kanan {
+    padding: 35px;
+}
+
+.kontak-kiri p {
+    color: #475569;
+
+    line-height: 1.8;
+}
+
+.info {
+    margin-top: 28px;
+}
+
+.info p {
+    margin: 17px 0;
+}
+
+.info i {
+    width: 30px;
+
+    color: var(--primary);
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+form input,
+form textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    margin-bottom: 17px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #f8fafc;
+
+    color: var(--text);
+
+    transition: 0.2s;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #60a5fa;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+form textarea {
+    resize: vertical;
+
+    min-height: 130px;
+}
+
+
+/* =====================================================
+   LOGIN
+===================================================== */
+
+.login {
+    min-height: 70vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 75px 20px;
+}
+
+.login-box {
+    width: 400px;
+
+    padding: 42px;
+
+    text-align: center;
+}
+
+.login-box i {
+    margin-bottom: 18px;
+
+    font-size: 70px;
+
+    color: var(--primary);
+}
+
+.login-box h2 {
+    margin-bottom: 25px;
+
+    color: var(--text);
+}
+
+.login-box input {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-bottom: 17px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #f8fafc;
+}
+
+.login-box input:focus {
+    border-color: #60a5fa;
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+.login-box p {
+    margin-top: 20px;
+}
+
+.login-box a {
+    color: var(--primary);
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   CART
+===================================================== */
+
+.cart h1 {
+    margin-bottom: 30px;
+}
+
+.cart-box {
+    padding: 30px;
+}
+
+.cart-item {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px 0;
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+.cart-item img {
+    width: 120px;
+
+    height: 120px;
+
+    object-fit: contain;
+}
+
+.item-info {
+    flex: 1;
+
+    margin-left: 10px;
+}
+
+.item-info h3 {
+    margin-bottom: 8px;
+}
+
+.item-info p {
+    color: var(--text-muted);
+}
+
+.total {
+    margin-top: 30px;
+
+    text-align: right;
+}
+
+.total span {
+    color: var(--primary);
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    margin-top: 70px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #070d18,
+            #101a2f
+        );
+
+    color: #ffffff;
+}
+
+.footer {
+    width: 90%;
+    max-width: 1280px;
+
+    margin: auto;
+
+    padding: 55px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 40px;
+}
+
+.footer h3 {
+    margin-bottom: 15px;
+
+    color: #ffffff;
+}
+
+.footer p,
+.footer li {
+    color: #94a3b8;
+
+    line-height: 28px;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer a {
+    color: #94a3b8;
+
+    transition: 0.2s;
+}
+
+.footer a:hover {
+    color: #67e8f9;
+}
+
+.copyright {
+    padding: 16px;
+
+    text-align: center;
+
+    background: #050914;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.05);
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   FOCUS & DISABLED
+===================================================== */
+
+button:focus-visible,
+.btn:focus-visible,
+.btn-card:focus-visible,
+.btn-keranjang:focus-visible,
+.btn-beli-wa:focus-visible,
+.hapus:focus-visible,
+.checkout:focus-visible {
+    outline:
+        3px solid rgba(37, 99, 235, 0.20);
+
+    outline-offset: 2px;
+}
+
+button:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+
+    .top-navbar {
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+    .search-box {
+        width: 100%;
+
+        max-width: none;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 45px 30px;
+    }
+
+    .hero-text,
+    .hero-image {
+        width: 100%;
+    }
+
+    .card-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    nav ul {
+        justify-content: center;
+
+        gap: 20px;
+    }
+
+    .visi-misi,
+    .kontak {
+        grid-template-columns: 1fr;
+    }
+
+    .about-box,
+    .kontak-kiri,
+    .kontak-kanan,
+    .login-box {
+        padding: 28px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE SMALL
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .top-navbar,
+    nav ul,
+    .hero,
+    .produk,
+    .about,
+    .kontak,
+    .cart,
+    .footer {
+        width: 92%;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+
+        gap: 8px 20px;
+    }
+
+    .menu-kanan {
+        gap: 15px;
+    }
+
+    .hero {
+        margin: 28px auto;
+
+        padding: 35px 22px;
+
+        border-radius: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 34px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    .cart-item {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .item-info {
+        margin: 10px 0;
+    }
+
+    .cart-box {
+        padding: 20px;
+    }
+
+    .judul {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .btn,
+    .checkout,
+    .hapus {
+        width: 100%;
+    }
+}
+
